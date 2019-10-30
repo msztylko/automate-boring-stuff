@@ -7,6 +7,13 @@ def printTable(table):
                 longest = len(item)
         colWidths[table.index(column)] = longest
 
+    for i in range(len(table)):
+        print()
+        for column in table:
+            formatted = column[i].rjust(max(colWidths))
+            print(formatted, end=' ')
+
+
 tableData = [['apples', 'oranges', 'cherries', 'bananas'],
              ['Alice', 'Bob', 'Carl', 'David'],
              ['dogs', 'cats', 'moose', 'geese']]
